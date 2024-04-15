@@ -18,7 +18,6 @@ public class Controller05 {
     // /main5/sub2?address=sinchon
     // /main5/sub2?address=gangnam
     // /main5/sub2?address=hongdae
-
     // "~ 로 가는 경로 탐색"
     @RequestMapping("sub2")
     public void method2(@RequestParam("address") String param) {
