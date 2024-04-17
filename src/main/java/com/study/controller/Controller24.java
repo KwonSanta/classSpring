@@ -87,4 +87,5 @@ public class Controller24 {
         }
         model.addAttribute("countries", list);
     }
+
 }

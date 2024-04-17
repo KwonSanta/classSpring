@@ -41,3 +41,53 @@ WHERE CustomerID >= 89;
 SELECT *
 FROM Customers
 WHERE CustomerID != 1;
+
+# 문자열 형식 (대소문자 구분 없음)
+SELECT *
+FROM Customers
+WHERE CustomerName > 'a';
+
+SELECT *
+FROM Customers
+WHERE CustomerName > 'S';
+SELECT *
+FROM Customers
+WHERE CustomerName > 's';
+SELECT *
+FROM Customers
+WHERE Country = 'Germany';
+
+# 날짜 형식
+DESC Employees;
+SELECT *
+FROM Employees;
+SELECT *
+FROM Employees
+WHERE BirthDate > '1968-12-03';
+SELECT *
+FROM Employees
+WHERE BirthDate >= '1955-01-01';
+
+# todo: 미국에 있는 공급자(Suppliers) 조회
+SELECT *
+FROM Suppliers
+WHERE Country = 'USA';
+# todo: last name 이 Fuller 인 직원(Employees) 조회
+SELECT *
+FROM Employees
+WHERE LastName = 'Fuller';
+# todo: CategoryID 가 3번인 상품(Products) 조회
+SELECT *
+FROM Products
+WHERE CategoryID = 3;
+# todo: 가격이 20.00 이상인 상품(Products) 조회
+SELECT *
+FROM Products
+WHERE Price >= 20.00;
+# todo: 주문일이 1997년 전(1997년 포함안함)인 주문(Orders) 조회
+SELECT *
+FROM Orders
+WHERE OrderDate < '1997-01-01';
+
+SELECT *
+FROM Products;
