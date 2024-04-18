@@ -184,14 +184,7 @@ public class Controller25 {
         ResultSet rs = pstmt.executeQuery();
 
         while (rs.next()) {
-            MyBean254Products obj = new MyBean254Products(
-                    rs.getInt(1),
-                    rs.getString(2),
-                    rs.getInt(3),
-                    rs.getInt(4),
-                    rs.getString(5),
-                    rs.getDouble(6));
-            list.add(obj);
+
         }
         model.addAttribute("productList", list);
         model.addAttribute("prevSearch", search);

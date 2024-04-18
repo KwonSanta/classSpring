@@ -20,10 +20,24 @@
 <%--    <input type="submit" value="조회">--%>
 </form>
 <hr>
-<c:if test="${empty productList}" var="emptyProducts">
+<form>
+    카테고리 선택
+    <div>
+        <select name="category" multiple>
+            <c:forEach items="${categoryList}" var="category">
+                <option value="${category.id}">${category.name}</option>
+            </c:forEach>
+        </select>
+    </div>
+    <div>
+        <button>조회</button>
+    </div>
+</form>
+<hr>
+<c:if test="${empty productList}">
     <p>조회 된 상품이 없습니다.</p>
 </c:if>
-<c:if test="${not emptyProducts}">
+<c:if test="${not empty productList}">
     <table>
         <thead>
         <tr>
@@ -36,14 +50,14 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${productList}" var="customer">
+        <c:forEach items="${productList}" var="product">
             <tr>
-                <td>${customer.productId}</td>
-                <td>${customer.productName}</td>
-                <td>${customer.supplierId}</td>
-                <td>${customer.categoryId}</td>
-                <td>${customer.unit}</td>
-                <td>${customer.price}</td>
+                <td>${product.productId}</td>
+                <td>${product.productName}</td>
+                <td>${product.supplierId}</td>
+                <td>${product.categoryId}</td>
+                <td>${product.unit}</td>
+                <td>${product.price}</td>
             </tr>
         </c:forEach>
         </tbody>

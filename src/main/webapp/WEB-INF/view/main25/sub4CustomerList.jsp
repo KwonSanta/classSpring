@@ -23,6 +23,28 @@
     <input type="submit" value="조회">
 </form>
 <hr>
+
+<form>
+    국가 :
+    <select name="country" multiple>
+        <c:forEach items="${countryList}" var="country">
+            <option value="${country}">${country}</option>
+        </c:forEach>
+    </select>
+    <button>조회</button>
+</form>
+<hr>
+<form action="">
+    카테고리 선택
+    <div>
+        <select name="" id="">
+            <c:forEach items="${categoryList}" var="category">
+                <option value="${category.id}">${category.name}</option>
+            </c:forEach>
+        </select>
+    </div>
+    <button>조회</button>
+</form>
 <table>
     <thead>
     <tr>
