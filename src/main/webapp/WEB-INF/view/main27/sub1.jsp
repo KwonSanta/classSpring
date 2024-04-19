@@ -49,6 +49,14 @@
 </table>
 
 <div>
+    <c:if test="${currentPage != 1}">
+        <c:url var="link" value="/main27/sub1">
+            <c:param name="page" value="1"/>
+        </c:url>
+        <span>
+            <a href="${link}">맨앞</a>
+        </span>
+    </c:if>
     <c:if test="${not empty prevPageNumber}">
         <c:url var="link" value="/main27/sub1">
             <c:param name="page" value="${prevPageNumber}"/>
@@ -70,9 +78,19 @@
             <c:param name="page" value="${nextPageNumber}"/>
         </c:url>
         <span>
-        <a href="${link}">다음</a>
+            <a href="${link}">다음</a>
         </span>
     </c:if>
+
+    <c:if test="${currentPage != lastPageNumber}">
+        <c:url var="link" value="/main27/sub1">
+            <c:param name="page" value="${lastPageNumber}"/>
+        </c:url>
+        <span>
+            <a href="${link}">맨뒤</a>
+        </span>
+    </c:if>
+
 </div>
 
 </body>
