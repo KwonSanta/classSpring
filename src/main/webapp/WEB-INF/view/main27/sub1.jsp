@@ -12,6 +12,10 @@
         table {
             width: 100%;
         }
+        .active {
+            background-color: blue;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -58,7 +62,7 @@
             <c:param name="page" value="${pageNumber}"/>
         </c:url>
         <span>
-            <a href="${link}">${pageNumber}</a>
+            <a class="${currentPage eq pageNumber ? 'active' : ''}" href="${link}">${pageNumber}</a>
         </span>
     </c:forEach>
     <c:if test="${not empty nextPageNumber}">
