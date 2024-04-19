@@ -4,8 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
-public class MyBean258Employees {
+public class MyBean258Employee {
     private int id;
     private String lastName;
     private String firstName;
