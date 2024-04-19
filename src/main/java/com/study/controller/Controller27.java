@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -22,8 +23,8 @@ public class Controller27 {
     private DataSource dataSource;
 
     @GetMapping("sub1")
-    public String method1(Integer page, Model model) throws SQLException {
-
+    public String method1(@RequestParam(defaultValue = "1") Integer page,
+                          Model model) throws SQLException {
         int offset = (page - 1) * 10;
         String sql = """
                 SELECT *
@@ -52,6 +53,7 @@ public class Controller27 {
             }
         }
         model.addAttribute("customerList", list);
+        model.addAttribute("prevPage", page);
         return "main27/sub1";
     }
 }
