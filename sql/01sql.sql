@@ -35,3 +35,28 @@ FROM w3schools.Customers;
 
 USE w3schools;
 SELECT * FROM Customers;
+
+# todo : my_table22 만들기
+#   PRIMARY KEY
+#   NOT NULL UNIQUE
+#   제약사항없이
+#   여러 레코드 INSERT 해보기
+CREATE TABLE my_table22
+(
+    col1 INT PRIMARY KEY,
+    col2 INT NOT NULL UNIQUE,
+    col3 INT
+);
+DESC my_table22;
+INSERT INTO my_table22
+    (col1, col2, col3)
+VALUES (1, 1, 1);
+INSERT INTO my_table22
+(col1, col2, col3)
+VALUES (2, 2, 1);
+INSERT INTO my_table22
+(col1, col2)
+VALUES (3, 3);
+SELECT * FROM my_table22;
+
+# CHECK, FOREIGN KEY
