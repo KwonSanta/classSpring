@@ -32,4 +32,24 @@ public class Controller41 {
     public void sub4(@RequestBody Map<String, Object> data) {
         System.out.println("data = " + data);
     }
+
+    @PostMapping("sub5")
+    public void sub5(@RequestBody Map<String, Object> data) {
+        System.out.println("data = " + data);
+        Object name = data.get("name");
+        System.out.println("name.getClass() = " + name.getClass());
+
+        Object age = data.get("age");
+        System.out.println("age.getClass() = " + age.getClass());
+
+        Object item = data.get("item");
+        System.out.println("item.getClass() = " + item.getClass());
+
+        Object married = data.get("married");
+        System.out.println("married.getClass() = " + married.getClass());
+
+        Object team = data.get("team");
+        System.out.println("team.getClass() = " + team.getClass());
+
+    }
 }
