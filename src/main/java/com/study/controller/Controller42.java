@@ -1,6 +1,7 @@
 package com.study.controller;
 
 import com.study.domain.MyBean411;
+import com.study.domain.MyBean412;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -54,4 +55,11 @@ public class Controller42 {
         return obj; // json 으로 직렬화
     }
 
+    @GetMapping("sub6")
+    @ResponseBody
+    public MyBean412 method6() {
+        MyBean412 myBean412 = new MyBean412();
+        myBean412.setName("감자");
+        return myBean412;
+    }
 }
