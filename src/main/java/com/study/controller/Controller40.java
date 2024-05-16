@@ -38,4 +38,27 @@ public class Controller40 {
         System.out.println("name = " + name);
         System.out.println("email = " + email);
     }
+
+    @PostMapping("/api/someurl3")
+    public void method6(Integer id,
+                        String city,
+                        String country) {
+        System.out.println("id = " + id);
+        System.out.println("city = " + city);
+        System.out.println("country = " + country);
+    }
+
+    // todo : /api/someurl4, get/post with data 요청 처리 메소드
+    @GetMapping("/api/someurl4")
+    public void method7(Integer id, String name, String email) {
+        System.out.println("id = " + id);
+        System.out.println("name = " + name);
+        System.out.println("email = " + email);
+    }
+    @PostMapping("/api/someurl4")
+    public void method8(Integer id, String name, String email) {
+        System.out.println("id = " + id);
+        System.out.println("name = " + name);
+        System.out.println("email = " + email);
+    }
 }
