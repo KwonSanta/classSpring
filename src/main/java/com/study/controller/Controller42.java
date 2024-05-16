@@ -1,5 +1,6 @@
 package com.study.controller;
 
+import com.study.domain.MyBean411;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,6 +43,15 @@ public class Controller42 {
                 "color", "blue",
                 "company", "tesla",
                 "model", List.of("model-x", "model-3", "model-s"));
+    }
+
+    @GetMapping("sub5")
+    @ResponseBody
+    public MyBean411 method5() {
+        MyBean411 obj = new MyBean411();
+        obj.setName("이강인");
+        obj.setAge(23);
+        return obj; // json 으로 직렬화
     }
 
 }
