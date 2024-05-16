@@ -35,4 +35,13 @@ public class Controller42 {
                 "item", List.of("축구공", "운동화", "유니폼"));
     }
 
+    @GetMapping("sub4")
+    @ResponseBody
+    public Map<String, Object> method4() {
+        return Map.of("name", "model-X",
+                "color", "blue",
+                "company", "tesla",
+                "model", List.of("model-x", "model-3", "model-s"));
+    }
+
 }
