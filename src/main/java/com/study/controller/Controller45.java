@@ -27,4 +27,22 @@ public class Controller45 {
 
         return null;
     }
+
+    @PostMapping("sub2")
+    @ResponseBody
+    public String sub2(@RequestParam("name") String name,
+                       @RequestParam("file[]") MultipartFile[] file) throws IOException {
+        System.out.println("name = " + name);
+
+        if (file != null && file.length > 0) {
+            for (MultipartFile f : file) {
+                if (f.getSize() > 0) {
+                    String path = "/Users/santa/Desktop/study/temp/" + f.getOriginalFilename();
+                    f.transferTo(new File(path));
+                }
+
+            }
+        }
+        return null;
+    }
 }
